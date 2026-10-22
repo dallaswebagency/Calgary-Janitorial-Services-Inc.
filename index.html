@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calgary Janitorial Services | Commercial, Construction and Sanitation Cleaning</title>
+<meta name="description" content="Licensed, insured and bonded commercial cleaning in Calgary since 1964. Janitorial, post-construction and food production sanitation cleaning. Call 403-569-6602 for a free quote.">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calgary Janitorial Services | Commercial Cleaning Since 1964">
+<meta property="og:description" content="Licensed, insured and bonded commercial, post-construction and sanitation cleaning in Calgary.">
+<meta property="og:image" content="images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1B2C; --ink2:#18304D; --paper:#F2F0E9; --white:#fff;
+  --yellow:#FFC21A; --yellow-d:#E8A900; --mute:#5C6877; --line:rgba(14,27,44,.14);
+  --disp:'Barlow Condensed',Impact,sans-serif; --body:'Public Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;font-weight:700;font-size:.95rem;border:2px solid var(--ink);background:var(--yellow);color:var(--ink);transition:transform .2s,box-shadow .2s;cursor:pointer;font-family:var(--body)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.btn.ghost{background:transparent}
+.btn.dark{background:var(--ink);color:var(--white)}
+.ph{background:linear-gradient(135deg,#d9dcd5,#c7ccc4);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:#cfd7e2}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.topbar b{color:var(--yellow);font-weight:500}
+header.site{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2px solid var(--ink)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:1.5rem}
+.brand img{height:54px;width:auto}
+.wm{font-family:var(--disp);font-weight:800;font-size:1.5rem;line-height:.95;text-transform:uppercase;letter-spacing:.02em}
+.wm small{display:block;font-family:var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.2em;color:var(--mute)}
+nav.main ul{display:flex;gap:2rem;list-style:none}
+nav.main a{font-weight:600;font-size:.92rem;padding:.4rem 0;border-bottom:3px solid transparent}
+nav.main a:hover{border-color:var(--yellow)}
+.head-cta{display:flex;align-items:center;gap:1.2rem}
+.head-phone{font-family:var(--disp);font-weight:700;font-size:1.5rem;letter-spacing:.02em}
+.menu-btn{display:none;background:none;border:2px solid var(--ink);padding:.5rem .8rem;font-weight:700;cursor:pointer;font-family:var(--body)}
+
+/* hero */
+.hero{position:relative;background-color:var(--paper);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:4.5rem 0 5.5rem}
+.kicker{display:inline-flex;gap:.7rem;align-items:center;margin-bottom:1.4rem;color:var(--mute)}
+.kicker:before{content:"";width:38px;height:3px;background:var(--yellow)}
+.hero h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(3.4rem,8.2vw,7.4rem);line-height:.88;letter-spacing:-.005em}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 58%,var(--yellow) 58% 92%,transparent 92%);padding:0 .08em}
+.hero p.lead{font-size:1.15rem;max-width:34rem;margin:1.8rem 0 2.2rem;color:#33415a}
+.hero .acts{display:flex;flex-wrap:wrap;gap:1rem}
+.hero-art{position:relative;min-height:600px}
+.hero-art .main{position:absolute;inset:0 0 0 8%;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%);border:0}
+.hero-art .sub{position:absolute;left:-2%;bottom:-6%;width:44%;aspect-ratio:1;border:6px solid var(--paper);box-shadow:0 0 0 2px var(--ink)}
+.tag{position:absolute;right:-1%;top:7%;background:var(--yellow);border:2px solid var(--ink);padding:.7rem 1.1rem;transform:rotate(4deg);font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;box-shadow:5px 5px 0 var(--ink)}
+.stamp{position:absolute;right:6%;bottom:-3%;width:128px;height:128px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;text-align:center;border:4px solid var(--yellow);transform:rotate(-8deg)}
+.stamp b{display:block;font-family:var(--disp);font-size:2.4rem;line-height:.9;color:var(--yellow)}
+.stamp span{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+
+/* ticker */
+.ticker{background:var(--ink);color:var(--paper);overflow:hidden;border-block:3px solid var(--yellow)}
+.ticker .track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.ticker span{font-family:var(--disp);font-weight:700;font-size:1.5rem;letter-spacing:.08em;text-transform:uppercase;padding:.8rem 1.6rem;white-space:nowrap}
+.ticker span:nth-child(even){color:var(--yellow)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* about */
+.about{padding:7rem 0;position:relative;overflow:hidden}
+.about .big{position:absolute;left:-1%;top:2rem;font-family:var(--disp);font-weight:800;font-size:clamp(12rem,32vw,30rem);line-height:.8;color:transparent;-webkit-text-stroke:2px rgba(14,27,44,.13);pointer-events:none;user-select:none}
+.about .wrap{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem}
+.about .side{align-self:end;display:grid;gap:1.6rem}
+.stat{display:flex;align-items:baseline;gap:1rem;border-top:2px solid var(--ink);padding-top:1rem}
+.stat b{font-family:var(--disp);font-weight:800;font-size:3.6rem;line-height:1;min-width:130px}
+.stat span{color:var(--mute);font-size:.95rem}
+.about h2,.sec-title{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(2.3rem,4.6vw,4rem);line-height:.95;margin-bottom:1.4rem}
+.about p{font-size:1.1rem;max-width:40rem;margin-bottom:1.2rem;color:#33415a}
+.about p strong{color:var(--ink)}
+.about a.link{font-weight:700;border-bottom:3px solid var(--yellow);padding-bottom:2px}
+
+/* directory */
+.dir{background:var(--ink);color:var(--paper);padding:6rem 0}
+.dir-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+.dir-head .mono{color:var(--yellow)}
+.dir .sec-title{margin:.6rem 0 0}
+.dir-head p{max-width:26rem;color:#b9c4d3}
+.dir-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:start}
+.rows{border-top:1px solid rgba(255,255,255,.2)}
+.row{display:grid;grid-template-columns:90px 1fr auto;gap:1.4rem;align-items:start;padding:2rem 0;border-bottom:1px solid rgba(255,255,255,.2);cursor:pointer;transition:background .25s,padding .25s}
+.row .n{font-family:var(--mono);font-size:1rem;color:#7f90a6;padding-top:.7rem}
+.row h3{font-family:var(--disp);font-weight:700;font-size:2.4rem;line-height:1;text-transform:uppercase;transition:color .2s}
+.row p{color:#b9c4d3;margin-top:.7rem;max-width:34rem}
+.row .go{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);padding:.5rem .8rem;align-self:center;white-space:nowrap}
+.row.on{padding-left:1rem;background:linear-gradient(90deg,rgba(255,194,26,.1),transparent)}
+.row.on h3,.row.on .n{color:var(--yellow)}
+.row.on .go{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.row-img{display:none}
+.panel{position:sticky;top:110px;aspect-ratio:4/5;border:2px solid var(--yellow)}
+.panel figure{position:absolute;inset:0;opacity:0;transition:opacity .45s}
+.panel figure.on{opacity:1}
+.panel figcaption{position:absolute;left:0;bottom:0;background:var(--yellow);color:var(--ink);padding:.5rem 1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* sectors */
+.sectors{padding:6rem 0 5rem;overflow:hidden}
+.sectors .head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.8rem}
+.sectors .sec-title{margin:0;max-width:34rem}
+.lane{display:flex;width:max-content;gap:1rem;margin-bottom:1rem}
+.lane.a{animation:slide 55s linear infinite}
+.lane.b{animation:slide 65s linear infinite reverse}
+.chip{white-space:nowrap;padding:.9rem 1.5rem;border:2px solid var(--ink);font-weight:600;background:var(--white);font-size:1.02rem}
+.chip:nth-child(3n){background:var(--yellow)}
+.chip:nth-child(4n){background:var(--ink);color:var(--paper)}
+.chip:nth-child(5n){border-radius:99px}
+.sectors:hover .lane{animation-play-state:paused}
+
+/* safety */
+.safety{padding:3rem 0 7rem}
+.safety .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:4.5rem;align-items:start}
+.clip{position:relative;background:var(--white);border:2px solid var(--ink);padding:3.4rem 2.2rem 2.2rem;transform:rotate(-1.4deg);box-shadow:10px 10px 0 var(--yellow)}
+.clip:before{content:"";position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:130px;height:34px;background:var(--ink);border-radius:6px}
+.clip:after{content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:60px;height:12px;background:var(--yellow);border-radius:4px}
+.clip h3{font-family:var(--disp);font-size:2rem;text-transform:uppercase;line-height:1;margin-bottom:.4rem}
+.clip .mono{color:var(--mute);display:block;margin-bottom:1.4rem}
+.clip ul{list-style:none}
+.clip li{display:flex;gap:1rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px dashed var(--line);font-size:1rem}
+.clip li:before{content:"";flex:none;width:22px;height:22px;border:2px solid var(--ink);margin-top:2px;background:var(--yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E1B2C' stroke-width='4'%3E%3Cpath d='M4 12l5 5L20 6'/%3E%3C/svg%3E") center/14px no-repeat}
+.clip .sign{margin-top:1.4rem;font-family:var(--mono);font-size:.72rem;color:var(--mute);letter-spacing:.1em}
+.safety .copy .photo{aspect-ratio:16/10;margin-bottom:2.2rem;border:2px solid var(--ink)}
+.pt{display:grid;grid-template-columns:56px 1fr;gap:1.2rem;margin-bottom:1.8rem}
+.pt .i{font-family:var(--disp);font-weight:800;font-size:2.8rem;line-height:.9;color:var(--yellow-d)}
+.pt h4{font-family:var(--disp);font-size:1.5rem;text-transform:uppercase;line-height:1;margin-bottom:.4rem}
+.pt p{color:#33415a}
+
+/* contact */
+.contact{background:var(--yellow);border-block:3px solid var(--ink);padding:6rem 0;position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(14,27,44,.05) 22px 44px)}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact .kicker{color:var(--ink)}
+.contact .kicker:before{background:var(--ink)}
+.contact h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(2.8rem,6vw,5.4rem);line-height:.9;margin-bottom:1.6rem}
+.contact .sub{font-size:1.1rem;max-width:30rem;margin-bottom:2.2rem}
+.ways{display:grid;gap:.9rem}
+.way{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:1rem;background:var(--paper);border:2px solid var(--ink);padding:1rem 1.2rem;transition:transform .2s,box-shadow .2s}
+.way:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.way .ic{width:54px;height:54px;background:var(--ink);color:var(--yellow);display:grid;place-items:center}
+.way svg{width:26px;height:26px}
+.way small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.way b{font-family:var(--disp);font-size:1.7rem;line-height:1.05}
+.way.email b{font-size:1.3rem;font-family:var(--body);font-weight:700}
+.way .arr{font-size:1.4rem;font-weight:700}
+form.quote{background:var(--paper);border:2px solid var(--ink);padding:2.2rem;box-shadow:10px 10px 0 var(--ink)}
+form.quote h3{font-family:var(--disp);font-size:2rem;text-transform:uppercase;line-height:1;margin-bottom:.4rem}
+form.quote>p{color:var(--mute);margin-bottom:1.4rem;font-size:.95rem}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .35rem;color:var(--mute)}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:2px solid var(--ink);background:var(--white);font:inherit;font-size:.98rem;margin-bottom:1rem;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--yellow-d);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+form.quote .btn{width:100%;justify-content:center;background:var(--ink);color:var(--yellow)}
+
+/* footer */
+footer{background:var(--ink);color:#c3cddb;padding:5rem 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:3rem;padding-bottom:3.5rem}
+footer .brand img{height:60px;margin-bottom:1.2rem}
+footer .wm{color:var(--paper);margin-bottom:1.2rem}
+footer .wm small{color:#8294ab}
+footer p{max-width:22rem;font-size:.95rem}
+footer h5{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:1.2rem}
+footer ul{list-style:none;display:grid;gap:.6rem}
+footer ul a:hover{color:var(--yellow)}
+.f-call{font-family:var(--disp);font-size:2rem;font-weight:700;color:var(--paper);display:block;line-height:1;margin-bottom:.5rem}
+.f-bottom{border-top:1px solid rgba(255,255,255,.16);padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.88rem}
+.f-bottom a:hover{color:var(--yellow)}
+.credit a{color:var(--yellow);font-weight:600;border-bottom:1px solid currentColor}
+
+/* responsive */
+@media(max-width:1040px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:2px solid var(--ink);padding:1rem 24px 1.5rem}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;gap:.4rem}
+  nav.main a{display:block;padding:.7rem 0;font-size:1.05rem}
+  .menu-btn{display:block}
+  .head-phone{display:none}
+  .hero .wrap,.about .wrap,.dir-grid,.safety .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-art{min-height:520px;margin-top:1rem}
+  .panel{display:none}
+  .row-img{display:block;aspect-ratio:16/10;margin-top:1.2rem;border:2px solid var(--yellow)}
+  .row{grid-template-columns:56px 1fr}
+  .row .go{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .topbar .wrap{justify-content:center;text-align:center}
+  .hero .wrap{padding:3rem 0 4rem}
+  .hero-art{min-height:440px}
+  .stamp{width:104px;height:104px}
+  .f2{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .row h3{font-size:1.9rem}
+  .way b{font-size:1.4rem}
+  .way.email b{font-size:1rem;word-break:break-all}
+  .stat b{font-size:2.8rem;min-width:100px}
+}
+@media(prefers-reduced-motion:reduce){.ticker .track,.lane{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap mono">
+    <span>Licensed <b>/</b> Insured <b>/</b> Bonded since 1964</span>
+    <span>Free quotes, call <b>403-569-6602</b></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://calgaryjanitorial.com/" aria-label="Calgary Janitorial Services home">
+      <img src="images/logo.png" alt="Calgary Janitorial Services Inc." onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="wm" style="display:none">Calgary Janitorial<small>Services Inc. / Since 1964</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="Main">
+      <ul>
+        <li><a href="https://calgaryjanitorial.com/">Home</a></li>
+        <li><a href="https://calgaryjanitorial.com/services/">Services</a></li>
+        <li><a href="https://calgaryjanitorial.com/references/">References</a></li>
+        <li><a href="https://calgaryjanitorial.com/gallery/">Gallery</a></li>
+        <li><a href="https://calgaryjanitorial.com/calgary-janitorial-services-contact-us/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="head-cta">
+      <a class="head-phone" href="tel:+14035696602">403-569-6602</a>
+      <a class="btn" href="https://calgaryjanitorial.com/free-quote/">Free quote</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker mono">Commercial cleaning / Calgary and area</div>
+      <h1>Calgary's cleaning crew, <em>since 1964.</em></h1>
+      <p class="lead">Licensed, insured and bonded janitorial, post-construction and sanitation cleaning, customized for every building we look after. Daily, weekly or monthly.</p>
+      <div class="acts">
+        <a class="btn" href="https://calgaryjanitorial.com/free-quote/">Get a free quote &rarr;</a>
+        <a class="btn ghost" href="tel:+14035696602">Call 403-569-6602</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ph main"><img src="images/hero-lobby.jpg" alt="Calgary Janitorial crew member polishing the floor of a bright office lobby" onerror="this.style.display='none'"></div>
+      <div class="ph sub"><img src="images/hero-detail.jpg" alt="Gloved hand wiping a stainless steel surface" onerror="this.style.display='none'"></div>
+      <div class="tag">Licensed / Insured / Bonded</div>
+      <div class="stamp"><div><b>60+</b><span>Years in<br>Calgary</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span>Daily</span><span>Weekly</span><span>Bi-weekly</span><span>Monthly</span><span>Office</span><span>Post-construction</span><span>Sanitation</span><span>Floor care</span>
+    <span>Daily</span><span>Weekly</span><span>Bi-weekly</span><span>Monthly</span><span>Office</span><span>Post-construction</span><span>Sanitation</span><span>Floor care</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="big" aria-hidden="true">1964</div>
+  <div class="wrap">
+    <div class="side">
+      <div class="stat"><b>1964</b><span>Serving Calgary area clients</span></div>
+      <div class="stat"><b>20 yrs</b><span>Of post-construction cleaning experience</span></div>
+      <div class="stat"><b>3 of 3</b><span>Licensed, insured and bonded</span></div>
+    </div>
+    <div>
+      <div class="kicker mono">About CJS</div>
+      <h2>One crew matched to your building</h2>
+      <p><strong>Calgary Janitorial Services Inc. (CJS)</strong> has been serving Calgary area clients since 1964. We provide licensed, insured and bonded cleaning to commercial buildings on a daily, weekly or monthly basis to meet your company's unique needs.</p>
+      <p>We match the right crew to each job, and our managers keep checking the work so the standard stays high. Detail cleaning, individually customized for every client.</p>
+      <a class="link" href="https://calgaryjanitorial.com/references/">View our references &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTORY -->
+<section class="dir" id="services">
+  <div class="wrap">
+    <div class="dir-head">
+      <div>
+        <div class="mono">Lobby directory / What we do</div>
+        <h2 class="sec-title">Find your floor</h2>
+      </div>
+      <p>Four service lines, one accountable team. Hover or tap a floor to see the work.</p>
+    </div>
+    <div class="dir-grid">
+      <div class="rows" id="rows">
+        <a class="row on" data-i="0" href="https://calgaryjanitorial.com/services/#business">
+          <span class="n">F01</span>
+          <div>
+            <h3>Business and office cleaning</h3>
+            <p>Daily, weekly, bi-weekly and monthly cleaning designed around your building. Condos, offices, clinics, restaurants, retail and community halls.</p>
+            <div class="ph row-img"><img src="images/svc-office.jpg" alt="Cleaner servicing a modern open-plan office" onerror="this.style.display='none'"></div>
+          </div>
+          <span class="go">Details</span>
+        </a>
+        <a class="row" data-i="1" href="https://calgaryjanitorial.com/services/#construction">
+          <span class="n">F02</span>
+          <div>
+            <h3>Post-construction cleaning</h3>
+            <p>Twenty years of experience on new builds. From offices and commercial construction companies to new restaurants and condo suites, we keep the dust down.</p>
+            <div class="ph row-img"><img src="images/svc-construction.jpg" alt="Crew cleaning a newly finished commercial space" onerror="this.style.display='none'"></div>
+          </div>
+          <span class="go">Details</span>
+        </a>
+        <a class="row" data-i="2" href="https://calgaryjanitorial.com/services/">
+          <span class="n">F03</span>
+          <div>
+            <h3>Food production sanitation</h3>
+            <p>Specialized crews following Canadian Food Inspection Agency (CFIA) guidelines. A professional sanitizing company can be very cost-effective. Ask for a free quote.</p>
+            <div class="ph row-img"><img src="images/svc-sanitation.jpg" alt="Sanitation crew in protective gear cleaning a food production line" onerror="this.style.display='none'"></div>
+          </div>
+          <span class="go">Details</span>
+        </a>
+        <a class="row" data-i="3" href="https://calgaryjanitorial.com/services/#business">
+          <span class="n">F04</span>
+          <div>
+            <h3>Floor, carpet and window care</h3>
+            <p>Specialty services for the finishing touch: floor care, carpet care using extraction and encapsulation, and window care.</p>
+            <div class="ph row-img"><img src="images/svc-specialty.jpg" alt="Technician machine-scrubbing a commercial floor" onerror="this.style.display='none'"></div>
+          </div>
+          <span class="go">Details</span>
+        </a>
+      </div>
+      <div class="panel ph" id="panel" aria-hidden="true">
+        <figure class="on"><img src="images/svc-office.jpg" alt="" onerror="this.style.display='none'"><figcaption>F01 / Business</figcaption></figure>
+        <figure><img src="images/svc-construction.jpg" alt="" onerror="this.style.display='none'"><figcaption>F02 / Construction</figcaption></figure>
+        <figure><img src="images/svc-sanitation.jpg" alt="" onerror="this.style.display='none'"><figcaption>F03 / Sanitation</figcaption></figure>
+        <figure><img src="images/svc-specialty.jpg" alt="" onerror="this.style.display='none'"><figcaption>F04 / Specialty</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="sectors" id="clients">
+  <div class="wrap head">
+    <h2 class="sec-title">From dental offices to helicopter bays</h2>
+    <a class="btn dark" href="https://calgaryjanitorial.com/references/">See references &rarr;</a>
+  </div>
+  <div class="lane a">
+    <span class="chip">Small business offices</span><span class="chip">Church and community halls</span><span class="chip">High-rise condominiums</span><span class="chip">Dental and medical offices</span><span class="chip">Automotive centres</span><span class="chip">Construction companies</span><span class="chip">Restaurants and bars</span><span class="chip">Electronics manufacturing plants</span>
+    <span class="chip">Small business offices</span><span class="chip">Church and community halls</span><span class="chip">High-rise condominiums</span><span class="chip">Dental and medical offices</span><span class="chip">Automotive centres</span><span class="chip">Construction companies</span><span class="chip">Restaurants and bars</span><span class="chip">Electronics manufacturing plants</span>
+  </div>
+  <div class="lane b">
+    <span class="chip">Builders</span><span class="chip">City recreation centres</span><span class="chip">Locomotive service centres</span><span class="chip">Grocery stores</span><span class="chip">Breweries</span><span class="chip">Helicopter service bays</span><span class="chip">Security companies</span><span class="chip">And many more</span>
+    <span class="chip">Builders</span><span class="chip">City recreation centres</span><span class="chip">Locomotive service centres</span><span class="chip">Grocery stores</span><span class="chip">Breweries</span><span class="chip">Helicopter service bays</span><span class="chip">Security companies</span><span class="chip">And many more</span>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="safety" id="safety">
+  <div class="wrap">
+    <div class="clip">
+      <h3>Site safety sign-in</h3>
+      <span class="mono">CJS crew / Every job site</span>
+      <ul>
+        <li>CSA approved PPE worn wherever required</li>
+        <li>WHMIS certified staff</li>
+        <li>Safety training, orientations and tool box meetings on site</li>
+        <li>First Aid (selected crew)</li>
+        <li>Elevated Work Platform (selected crew)</li>
+        <li>Transport of Dangerous Goods (selected crew)</li>
+        <li>H2S Alive (selected crew)</li>
+        <li>MSDS sheets available to staff and clients</li>
+      </ul>
+      <div class="sign">Internal and client-specific safety protocols followed</div>
+    </div>
+    <div class="copy">
+      <div class="ph photo"><img src="images/crew.jpg" alt="CJS cleaning crew in hi-vis vests and safety gear at a toolbox meeting" onerror="this.style.display='none'"></div>
+      <div class="kicker mono">Quality and safety</div>
+      <h2 class="sec-title" style="font-size:clamp(2rem,3.6vw,3.2rem)">Careful work, on every shift</h2>
+      <div class="pt"><span class="i">01</span><div><h4>Quality assurance</h4><p>Our professional staff work with the utmost detail, and our managers continually monitor the work to assure the highest standard.</p></div></div>
+      <div class="pt"><span class="i">02</span><div><h4>Environmentally responsible</h4><p>We use a small, select range of highly effective cleaning chemicals, plus food grade, biodegradable and natural cleaners wherever appropriate.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="kicker mono">Get started</div>
+      <h2>Tell us about your building</h2>
+      <p class="sub">Questions about our professional services? Reach us any way you like and we will arrange a free quote.</p>
+      <div class="ways">
+        <a class="way" href="tel:+14035696602">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><small>Call us</small><b>403-569-6602</b></span><span class="arr">&rarr;</span>
+        </a>
+        <a class="way email" href="mailto:martin@calgaryjanitorial.com">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span><small>Email</small><b>martin@calgaryjanitorial.com</b></span><span class="arr">&rarr;</span>
+        </a>
+        <a class="way" href="https://calgaryjanitorial.com/free-quote/">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+          <span><small>Free quote</small><b>Request a quote online</b></span><span class="arr">&rarr;</span>
+        </a>
+      </div>
+    </div>
+    <form class="quote" action="mailto:martin@calgaryjanitorial.com" method="post" enctype="text/plain">
+      <h3>Quick quote request</h3>
+      <p>Share a few details and we will get back to you.</p>
+      <div class="f2">
+        <div><label for="n">Name</label><input id="n" name="Name" required></div>
+        <div><label for="c">Company</label><input id="c" name="Company"></div>
+      </div>
+      <div class="f2">
+        <div><label for="p">Phone</label><input id="p" name="Phone" type="tel"></div>
+        <div><label for="e">Email</label><input id="e" name="Email" type="email" required></div>
+      </div>
+      <label for="t">Service needed</label>
+      <select id="t" name="Service">
+        <option>Business and office cleaning</option>
+        <option>Post-construction cleaning</option>
+        <option>Food production sanitation</option>
+        <option>Floor, carpet or window care</option>
+        <option>Not sure yet</option>
+      </select>
+      <label for="m">About your building</label>
+      <textarea id="m" name="Message"></textarea>
+      <button class="btn" type="submit">Send my request &rarr;</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="https://calgaryjanitorial.com/">
+          <img src="images/logo-white.png" alt="Calgary Janitorial Services Inc." onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="wm" style="display:none">Calgary Janitorial<small>Services Inc. / Since 1964</small></span>
+        </a>
+        <p>Licensed, insured and bonded commercial cleaning for Calgary area buildings since 1964.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://calgaryjanitorial.com/services/#business">Business and office</a></li>
+          <li><a href="https://calgaryjanitorial.com/services/#construction">Post-construction</a></li>
+          <li><a href="https://calgaryjanitorial.com/services/">Food production sanitation</a></li>
+          <li><a href="https://calgaryjanitorial.com/services/">Floor, carpet, window care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="https://calgaryjanitorial.com/">Home</a></li>
+          <li><a href="https://calgaryjanitorial.com/references/">References</a></li>
+          <li><a href="https://calgaryjanitorial.com/gallery/">Gallery</a></li>
+          <li><a href="https://calgaryjanitorial.com/free-quote/">Free quote</a></li>
+          <li><a href="https://calgaryjanitorial.com/calgary-janitorial-services-contact-us/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a class="f-call" href="tel:+14035696602">403-569-6602</a>
+        <ul>
+          <li><a href="mailto:martin@calgaryjanitorial.com">martin@calgaryjanitorial.com</a></li>
+          <li>Calgary, Alberta</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; <span id="yr">2026</span> Calgary Janitorial Services Inc. All rights reserved. <a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></span>
+      <span class="credit">Design by <a href="https://www.dallaswebagency.us/" target="_blank" rel="noopener">Dallas Web Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  var rows=[].slice.call(document.querySelectorAll('.row')),figs=[].slice.call(document.querySelectorAll('#panel figure'));
+  function set(i){rows.forEach(function(r,k){r.classList.toggle('on',k==i)});figs.forEach(function(f,k){f.classList.toggle('on',k==i)})}
+  rows.forEach(function(r){var i=+r.dataset.i;r.addEventListener('mouseenter',function(){set(i)});r.addEventListener('focus',function(){set(i)})});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
